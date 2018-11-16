@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\web\IdentityInterface;
 
 /**
  * This is the model class for table "user".
@@ -14,7 +15,7 @@ use Yii;
  * @property string $date_create
  * @property string $password
  */
-class User extends \yii\db\ActiveRecord
+class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
     /**
      * {@inheritdoc}
@@ -134,6 +135,10 @@ class User extends \yii\db\ActiveRecord
     {
         return ($this->password == $password) ? true : false;
     }
+
+
+
+
 
 
 
