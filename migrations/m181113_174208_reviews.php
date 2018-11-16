@@ -39,7 +39,6 @@ class m181113_174208_reviews extends Migration
         );
 
         // creates index for column `id_city`
-        /*
         $this->createIndex(
             'idx-reviews-id_author',
             'reviews',
@@ -47,14 +46,13 @@ class m181113_174208_reviews extends Migration
         );
         // add foreign key for table `city`
         $this->addForeignKey(
-            'fk-user-id_autor',
+            'fk-city-id_autor',
             'reviews',
             'id_autor',
             'users',
             'id',
             'CASCADE'
         );
-        */
     }
 
 
